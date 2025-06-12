@@ -1,0 +1,50 @@
+.input {
+    width: 4rem;
+    min-height: 4rem;
+    font-size: 2rem;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.input:focus {
+    outline: none;
+    /* border: none; */
+}
+
+.inputDefault {
+    /* background-color: #D3D6DA; */
+    border: 2px solid #D3D6DA;
+    color: transparent; /* Make the text invisible */
+    text-shadow: 0 0 0 black; /* Simulate the text with a shadow */
+}
+
+.inputDisabled {
+    border: 2px solid #D3D6DA;
+    color: transparent; /* Make the text invisible */
+    text-shadow: 0 0 0 black; /* Simulate the text with a shadow */
+    pointer-events: none;
+}
+
+.inputCorrect {
+    transition: all .5s;
+    background-color: #69aa64;
+    color: transparent; /* Make the text invisible */
+    text-shadow: 0 0 0 white; /* Simulate the text with a shadow */
+}
+.inputIncorrectPlace {
+    transition: all .5s;
+    background-color: #c9b458;
+    color: transparent; /* Make the text invisible */
+    text-shadow: 0 0 0 white; /* Simulate the text with a shadow */
+}
+.inputNotPresent {
+    transition: all .5s;
+    background-color: #767c7f;
+    color: transparent; /* Make the text invisible */
+    text-shadow: 0 0 0 white; /* Simulate the text with a shadow */
+}
