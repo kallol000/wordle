@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "wordle",
   description: "A copy of the Wordle game",
+  icons: {
+    icon: '/public/favicon.ico',
+  }
 };
 
 export default function RootLayout({ children }) {

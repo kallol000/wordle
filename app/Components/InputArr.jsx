@@ -135,11 +135,11 @@ export default function InputArr({row, rowNum, setRowNum, elems, ref, answer, cl
 
             if(attempt === answer.get("ans")) {
                 if(rowNum === 5) {
-                    toast("Phew")
+                    toast.success("Phew")
                 }else if(rowNum === 0 || rowNum === 1) {
-                    toast("Awesome!")
+                    toast.success("Awesome!")
                 }else {
-                    toast("Congrats")
+                    toast.success("Congrats")
                 }
                 // setClassNames(prev => )
                 setClassNames(prev => {
@@ -153,8 +153,8 @@ export default function InputArr({row, rowNum, setRowNum, elems, ref, answer, cl
             }
             // if(rowNum === 5 && attempt === answer.get("ans")) {
             // }
-            if(rowNum === 5 && attempt !== answer.get("ans")) {
-                toast(`The answer is ${answer.get("ans")}. Better luck next time`)
+            if(rowNum === 5 && attempt.length === 5 && attempt !== answer.get("ans")) {
+                toast.error(`The answer is ${answer.get("ans")}. Better luck next time`)
             }
         }
     }
@@ -164,6 +164,18 @@ export default function InputArr({row, rowNum, setRowNum, elems, ref, answer, cl
            {rowElems}
             <Toaster 
                 position="bottom-center"
+                toastOptions={{
+                    success: {
+                      style: {
+                        border: "2px solid #7DCFB6",
+                      },
+                    },
+                    error: {
+                      style: {
+                        border: "2px solid #BB513A "
+                      },
+                    },
+                  }}
             />
         </div>
     )
